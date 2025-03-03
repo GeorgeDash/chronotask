@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth text-[16px]">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font and icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <!-- Font and icons -->
+        <link rel="stylesheet" href="/build/css/style.css">
+        <title>ChronoTask</title>
+    </head>
+    <body class="min-h-dvh w-full flex flex-col items-center overflow-x-clip pt-4">
+        <header class="flex items-center justify-between z-[9999] px-10">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="/build/img/logo.png" alt="main logo" class="size-8">
+                <h1 class="text-2xl font-semibold">ChronoTask</h1>
+            </a>
+            <nav id="main-nav" class="flex items-center space-x-10 bg-white border border-gray-300 rounded-full py-2.5 px-5 fixed left-1/2 -translate-x-1/2 *:text-[0.9rem] *:font-light *:relative *:after:content-[''] *:after:w-0 *:after:h-[0.75px] *:after:bg-black *:after:transition-all *:after:duration-375 *:hover:after:w-full *:after:absolute *:after:bottom-0 *:after:left-0">
+                <a href="#solutions">Solutions</a>
+                <a href="#features">Features</a>
+                <a href="#integrations">Integrations</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <div id="user-actions" class="flex items-center space-x-7 *:text-[0.9rem] *:font-light">
+                <a href="javascript:;" class="relative after:content-[''] after:w-0 after:h-[0.75px] after:bg-black after:transition-all after:duration-375 hover:after:w-full after:absolute after:bottom-0 after:left-0">Sign in</a>
+                <button class="cursor-pointer overflow-hidden border border-gray-300 rounded-2xl px-5 py-2.5 relative after:content-[''] after:w-0 after:h-full after:bg-gray-300 after:rounded-2xl after:transition-all after:duration-375 hover:after:w-full after:absolute after:top-1/2 after:-translate-y-1/2 after:left-0">
+                    <p class="z-10 text-gray-500 font-medium relative">Get demo</p>
+                </button>
+            </div>
+        </header>
+        <section id="hero" class="hero-pattern !w-[calc(100%-26px)] space-y-5 text-center border-2 border-gray-200 rounded-2xl !mt-8 py-[10%]">
+            <img src="/build/img/logo.png" alt="hero main logo" class="size-24 bg-gradient-to-br from-white to-gray-300 rounded-2xl shadow-2xl p-4">
+            <div class="heading flex flex-col items-center space-y-10">
+                <h2 class="text-[5rem] font-normal leading-[1.15]">
+                    <p>Think, plan, and track</p> 
+                    <p class="text-gray-400">all in one place</p></h2>
+                <p class="text-xl">Efficiently manage your tasks and boost productivity.</p>
+            </div>
+            <button class="cursor-pointer bg-blue-600 text-white border border-blue-600 rounded-xl transition-colors duration-375 hover:bg-white hover:text-blue-600 px-5 py-2.5">
+                <p>Get free demo</p>
+            </button>
+        </section>
+        <main>
+            <section id="solutions" class="scroll-mt-20">
+                <div class="label">Solutions</div>
+                <h2 class="section-heading text-center py-8">
+                    <p>Solve your team's</p> 
+                    <p>biggest challenges</p>
+                </h2>
+                <hr class="w-full border-t-2 border-t-gray-200">
+                <div class="benefits w-[85%] z-50 grid grid-rows-3 md:grid-rows-none md:grid-cols-3 border-2 border-y-0 border-gray-200 shadow-[inset_0px_-25px_5px_0px_#ffffff] md:px-4 pb-4">
+                    <div class="benefit before:content-[''] before:size-6 before:bg-white before:rounded-full before:border before:border-gray-200 before:shadow-[0px_0px_10px_10px_#ffffff] before:absolute before:-top-3 sm:max-md:before:-left-3.25 md:before:-left-7.25 after:content-[''] after:z-10 after:size-6 after:bg-white after:rounded-full after:border after:border-gray-200 after:shadow-[0px_0px_10px_10px_#ffffff] after:absolute after:-top-3 after:-right-3.25">
+                        <i class='bx bx-shape-square rotate-45'></i>
+                        <p>Ensure your team is always on the same page with task-sharing and transparent updates.</p>
+                    </div>
+                    <div class="benefit sm:max-md:border-t-2 sm:max-md:border-b-2 md:border-l-2 md:border-r-2 border-gray-200">
+                        <i class='bx bx-list-check'></i>
+                        <p>Prioritize and manage tasks effectively so your team can focus on what matters most.</p>
+                    </div>
+                    <div class="benefit before:hidden md:before:block before:content-[''] before:size-6 before:bg-white before:rounded-full before:border before:border-gray-200 before:shadow-[0px_0px_10px_10px_#ffffff] before:absolute before:-top-3 before:-left-3.25 after:hidden md:after:block after:content-[''] after:z-10 after:size-6 after:bg-white after:rounded-full after:border after:border-gray-200 after:shadow-[0px_0px_10px_10px_#ffffff] after:absolute after:-top-3 after:-right-7">
+                        <i class='bx bx-user-plus'></i>
+                        <p>Hold everyone accountable without the need for constant check-ins.</p>
+                    </div>
+                    <img src="/build/img/solutions.webp" alt="solutions image" class="col-span-full rounded-4xl" loading="lazy">
+                </div>
+            </section>
+            <section id="features" class="!w-[calc(100%-26px)] bg-[#f6f6f6] border-2 border-gray-300 rounded-2xl px-16 py-8 scroll-mt-10">
+                <div class="label">Features</div>
+                <h2 class="section-heading pt-11 pb-8">Keep everything in one place</h2>
+                <p class="text-xl">Forget complex project management tools.</p>
+                <div id="features-table" class="w-full grid grid-rows-2 grid-cols-7 gap-3.5 mt-8">
+                    <div class="feature col-span-3">
+                        <img src="/build/img/features/collaboration.jpg" alt="collaboration" loading="lazy">
+                        <div class="desc">
+                            <h3>Seamless Collaboration</h3>
+                            <p>Work together with your team effortlessly, share tasks, and update progress in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="feature col-span-4">
+                        <img src="/build/img/features/management.webp" alt="management" class="scale-120" loading="lazy">
+                        <div class="desc">
+                            <h3>Time Management Tools</h3>
+                            <p class="px-[10%]">Optimize your time with integrated tools like timers, reminders, and schedules.</p>
+                        </div>
+                    </div>
+                    <div class="feature !flex-row !space-y-0 col-span-5 !pb-0 !pr-0 !pl-16">
+                        <div class="h-full flex flex-col justify-between pr-22 pb-17">
+                            <div class="flex justify-center items-center size-20 bg-gradient-to-br from-white to-gray-200 rounded-2xl shadow-2xl">
+                                <i class='bx bxs-chevrons-right text-6xl bg-gradient-to-b from-amber-400 to-amber-600 bg-clip-text text-transparent'></i>
+                            </div>
+                            <div class="desc text-left">
+                                <h3>Advanced task tracking</h3>
+                                <p>A bird's eye view of your entire behavior and productivity.</p>
+                            </div>
+                        </div>
+                        <img src="/build/img/features/tracking.webp" alt="tracking" class="w-auto h-full z-99 object-cover" loading="lazy">
+                    </div>
+                    <div class="feature !bg-transparent border-4 border-dashed border-gray-300 col-span-2 !px-0 !pb-0">
+                      <img src="/build/img/features/widgets.png" alt="widgets" loading="lazy">
+                      <div class="desc">
+                          <h3>Customizable Workspaces</h3> 
+                      </div>
+                      <img src="/build/img/features/grid-layout.png" alt="grid layout" class="scale-95 relative -right-5" loading="lazy">
+                    </div>
+                </div>
+                <h4 class="text-xl pt-8">and a lot more features...</h4>
+            </section>
+            <section id="integrations" class="scroll-mt-16">
+                <div class="label">Integrations</div>
+                <h2 class="section-heading pt-6 pb-14">
+                    <p>Connect integrations</p>
+                    <p>you use every day</p>
+                </h2>
+                <div id="integrations-wrapper">
+                    <div class="slider">
+                        <div class="integration">
+                                <img src="https://www.computerhope.com/issues/pictures/google-drive-logo.png" alt="google drive">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="adobe creative cloud">
+                        </div>
+                        <div class="integration">
+                                <img src="https://avatars.slack-edge.com/2018-11-30/493753869479_4b703f4119efe3d7d0ff_512.png" alt="jira data center">
+                        </div>
+                        <div class="integration">
+                                <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-logo-icon-download-in-svg-png-gif-file-formats--new-google-logos-pack-icons-2476484.png?f=webp&w=256" alt="gmail">
+                        </div>
+                        <div class="integration">
+                                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="figma">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="microsoft outlook">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png" alt="slack">
+                        </div>
+                    </div>
+                    <div class="slider animate-reverse">
+                        <div class="integration">
+                                <img src="https://www.computerhope.com/issues/pictures/google-drive-logo.png" alt="google drive">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="adobe creative cloud">
+                        </div>
+                        <div class="integration">
+                                <img src="https://avatars.slack-edge.com/2018-11-30/493753869479_4b703f4119efe3d7d0ff_512.png" alt="jira data center">
+                        </div>
+                        <div class="integration">
+                                <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-logo-icon-download-in-svg-png-gif-file-formats--new-google-logos-pack-icons-2476484.png?f=webp&w=256" alt="gmail">
+                        </div>
+                        <div class="integration">
+                                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="figma">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="microsoft outlook">
+                        </div>
+                        <div class="integration">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png" alt="slack">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            window.addEventListener('load', () => {
+                requestAnimationFrame(() => {
+                    document.querySelectorAll(".slider").forEach(slider => {
+                        const items = Array.from(slider.children);
+                        const sliderWidth = slider.scrollWidth; // Get initial width
+
+                        items.forEach(item => {
+                            const clone = item.cloneNode(true);
+                            slider.appendChild(clone);
+                        });
+
+                        // Set width explicitly after cloning
+                        slider.style.width = `${sliderWidth * 2}px`; // Double the width
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

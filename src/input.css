@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@theme{
+    --font-sans: Figtree, sans-serif;
+
+    /* Breakpoints */
+    --breakpoint-sm: 320px;
+    --breakpoint-sm-m: 375px;
+    --breakpoint-sm-l: 425px;
+    --breakpoint-sm-xl: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1200px;
+    --breakpoint-3xl: 1440px;
+
+    /* Animations */
+    --animate-scroll: scroll 10s linear infinite;
+    @keyframes scroll{
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* Defailt styles */
+header, main, section, footer{
+    @apply w-full;
+}
+
+main, section{
+    @apply flex flex-col items-center;
+}
+
+section{
+    @apply my-12;
+}
+
+.section-heading{
+    @apply text-center text-[4rem] font-medium leading-[1.15];
+}
+
+/* Custom classes */
+/* ---------------------- */
+
+/* Hero section background */
+.hero-pattern{
+    @apply bg-white;
+
+    background-image: radial-gradient(#d2dbe2 1.5px, transparent 1.5px), 
+        radial-gradient(#d2dbe2 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+/* Section labels */
+.label{
+    @apply text-gray-700 text-[0.9rem] border-2 border-gray-300 rounded-full shadow-2xl px-5 py-2.5;
+}
+
+
+/* Benefits */
+.benefit{
+    @apply w-full flex flex-col space-y-3.5 pt-7 pb-14 pl-10 pr-14 md:pr-20 lg:pr-28 relative;
+}    
+
+.benefit i{
+    @apply w-fit text-yellow-500 text-4xl;
+}
+
+.benefit p{
+    @apply w-fit;
+}
+
+
+/* Feautres */
+.feature{
+    @apply flex flex-col items-center justify-between space-y-7 overflow-clip z-20 text-center bg-white rounded-2xl shadow-sm px-16 py-18;
+}
+
+.desc{
+    @apply flex flex-col space-y-3.5
+}
+
+.desc h3{
+    @apply text-2xl font-medium;
+}
+
+.desc p{
+    @apply text-gray-400;
+}
+
+
+/* Integrations slider */
+#integrations-wrapper{
+    @apply w-full flex flex-col space-y-12 overflow-hidden;
+
+    -webkit-mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.slider{
+    @apply w-max flex flex-nowrap space-x-14 overflow-hidden animate-scroll py-5;
+}
+
+.animate-reverse{
+    animation-direction: reverse;
+}
+
+.integration{
+    @apply size-48 bg-white rounded-3xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-12;
+}
