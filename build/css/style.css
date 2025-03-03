@@ -380,7 +380,7 @@
     --breakpoint-sm-l: 425px;
     --breakpoint-sm-xl: 576px;
     --breakpoint-3xl: 1440px;
-    --animate-scroll: scroll 10s linear infinite;
+    --animate-scroll: scroll 15s linear infinite;
   }
 }
 @layer base {
@@ -569,9 +569,6 @@
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -1501,25 +1498,45 @@ section {
   width: max-content;
   animation: var(--animate-scroll);
   flex-wrap: nowrap;
-  :where(& > :not(:last-child)) {
-    --tw-space-x-reverse: 0;
-    margin-inline-start: calc(calc(var(--spacing) * 14) * var(--tw-space-x-reverse));
-    margin-inline-end: calc(calc(var(--spacing) * 14) * calc(1 - var(--tw-space-x-reverse)));
-  }
   overflow: hidden;
   padding-block: calc(var(--spacing) * 5);
+  &:hover {
+    @media (hover: hover) {
+      :is(& > *) {
+        --tw-grayscale: grayscale(100%);
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+      }
+    }
+  }
+}
+.slider:hover {
+  animation-play-state: paused;
 }
 .animate-reverse {
   animation-direction: reverse;
 }
 .integration {
+  margin-right: calc(var(--spacing) * 14);
   width: calc(var(--spacing) * 48);
   height: calc(var(--spacing) * 48);
+  align-content: center;
+  justify-items: center;
   border-radius: var(--radius-3xl);
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 12);
   --tw-shadow: 0 3px 10px var(--tw-shadow-color, rgb(0,0,0,0.2));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 375ms;
+  transition-duration: 375ms;
+  &:hover {
+    @media (hover: hover) {
+      --tw-grayscale: grayscale(0%);
+      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
+  }
 }
 @keyframes spin {
   to {
@@ -1712,5 +1729,41 @@ section {
 @property --tw-content {
   syntax: "*";
   initial-value: "";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
   inherits: false;
 }

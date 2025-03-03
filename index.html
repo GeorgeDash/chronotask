@@ -141,47 +141,39 @@
                     </div>
                     <div class="slider animate-reverse">
                         <div class="integration">
-                                <img src="https://www.computerhope.com/issues/pictures/google-drive-logo.png" alt="google drive">
+                                <img src="https://www.appengine.ai/uploads/images/profile/logo/Nightfall%20AI-AI.png" alt="nightfall ai">
                         </div>
                         <div class="integration">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="adobe creative cloud">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1200px-Salesforce.com_logo.svg.png" alt="salesforce">
                         </div>
                         <div class="integration">
-                                <img src="https://avatars.slack-edge.com/2018-11-30/493753869479_4b703f4119efe3d7d0ff_512.png" alt="jira data center">
+                                <img src="https://taskcallapp.com/images/vendors/freshdesk/FreshdeskIcon.png" alt="freshdesk">
                         </div>
                         <div class="integration">
-                                <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-logo-icon-download-in-svg-png-gif-file-formats--new-google-logos-pack-icons-2476484.png?f=webp&w=256" alt="gmail">
+                                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/168_Hubspot_logo_logos-512.png" alt="hubspot">
                         </div>
                         <div class="integration">
-                                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="figma">
+                                <img src="https://d2mkz4zdclmlek.cloudfront.net/blog/wp-content/uploads/2021/01/Intercom-logo-sq-black-trans.png" alt="intercom">
                         </div>
                         <div class="integration">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="microsoft outlook">
+                                <img src="https://help.lafayette.edu/wp-content/uploads/sites/451/2021/02/New-Google-Calendar.png" alt="google calendar">
                         </div>
                         <div class="integration">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png" alt="slack">
+                                <img src="https://thetalake.com/wp-content/uploads/2019/08/TL-logo-symbol.400x400.png" alt="theta lake">
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
-        <script>
-            window.addEventListener('load', () => {
-                requestAnimationFrame(() => {
+            <script>
+                window.addEventListener('load', () => {
+                    // Get all sliders
                     document.querySelectorAll(".slider").forEach(slider => {
-                        const items = Array.from(slider.children);
-                        const sliderWidth = slider.scrollWidth; // Get initial width
-
-                        items.forEach(item => {
-                            const clone = item.cloneNode(true);
-                            slider.appendChild(clone);
-                        });
-
-                        // Set width explicitly after cloning
-                        slider.style.width = `${sliderWidth * 2}px`; // Double the width
+                        // Clone items for each slider
+                        const items = [...slider.children];
+                        items.forEach(item => slider.appendChild(item.cloneNode(true)));
                     });
                 });
-            });
-        </script>
+            </script>
+        </main>
     </body>
 </html>
