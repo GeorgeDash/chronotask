@@ -14,8 +14,8 @@
     --breakpoint-3xl: 1440px;
 
     /* Animations */
-    --animate-scroll: scroll 15s linear infinite;
-    @keyframes scroll{
+    --animate-slide: slide 30s linear infinite;
+    @keyframes slide{
         from {
             transform: translateX(0);
         }
@@ -63,7 +63,7 @@ section{
 
 /* Benefits */
 .benefit{
-    @apply w-full flex flex-col space-y-3.5 pt-7 pb-14 pl-10 pr-14 md:pr-20 lg:pr-28 relative;
+    @apply w-full space-y-3.5 pt-7 pb-14 pl-10 pr-14 md:pr-20 lg:pr-28 relative;
 }    
 
 .benefit i{
@@ -81,7 +81,7 @@ section{
 }
 
 .desc{
-    @apply flex flex-col space-y-3.5
+    @apply space-y-3.5;
 }
 
 .desc h3{
@@ -95,18 +95,17 @@ section{
 
 /* Integrations slider */
 #integrations-wrapper{
-    @apply w-full flex flex-col space-y-12 overflow-hidden;
-
-    -webkit-mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
-    mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    @apply w-full space-y-12 overflow-hidden;
 }
 
 .slider{
-    @apply w-max flex flex-nowrap overflow-hidden animate-scroll hover:*:grayscale py-5;
+    @apply w-max flex flex-nowrap overflow-hidden animate-slide md:hover:*:grayscale py-5;
 }
 
 .slider:hover{
-    animation-play-state: paused;
+    @media (width >= 768px) {
+        animation-play-state: paused;
+    }
 }
 
 .animate-reverse{
@@ -114,5 +113,30 @@ section{
 }
 
 .integration{
-    @apply size-48 content-center justify-items-center bg-white rounded-3xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-375 hover:grayscale-0 p-12 mr-14;
+    @apply size-48 content-center justify-items-center bg-white rounded-3xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:transition md:duration-375 md:hover:grayscale-0 p-12 mr-14;
+}
+
+/* Testimonials */
+.testimonial{
+    @apply w-full flex flex-col justify-between bg-gray-100 border-2 border-gray-300 rounded-2xl px-10 py-12;
+}
+
+.testimonial p{
+    @apply text-lg font-light;
+}
+
+.person{
+    @apply w-full flex space-x-5 items-center;
+}
+
+.person img{
+    @apply size-16 rounded-lg;
+}
+
+.name h6{
+    @apply text-lg text-gray-500 font-light;
+}
+
+.name p{
+    @apply text-xl font-medium; 
 }
